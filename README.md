@@ -95,17 +95,6 @@ translate.key = "YOUR-KEY-HERE";
 // ... use translate()
 ```
 
-If you are in Node.js, this likely comes from an environment variable:
-
-```js
-// ... include translate
-
-translate.engine = "deepl";
-translate.key = process.env.TRANSLATE_KEY;
-
-// ... use translate()
-```
-
 To pass it per-translation, you can add it to your arguments:
 
 ```js
