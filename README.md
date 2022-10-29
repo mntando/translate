@@ -1,6 +1,6 @@
 # Translate
 
-Convert text to different languages on Node.js and the browser. Flexible package and powerful back-end using Google (default), [Yandex](https://translate.yandex.com/), [Libre](https://libretranslate.com/) or [DeepL](https://www.deepl.com/en/translator):
+Convert text to different languages on the browser. Flexible package and powerful back-end using Google (default), [Yandex](https://translate.yandex.com/), [Libre](https://libretranslate.com/) or [DeepL](https://www.deepl.com/en/translator):
 
 ```js
 import translate from "translate";
@@ -14,25 +14,13 @@ console.log("Hola mundo");
 
 ## Getting started
 
-This package can be used in Node.js and on the browser. First thing install the library:
-
-```bash
-npm install translate
-```
-
-Then import it to use it:
-
-```js
-import translate from "translate";
-```
-
-Alternatively for the browser you can use [Jsdelivr **CDN**](https://www.jsdelivr.com/package/npm/translate):
+For the browser you can use [Jsdelivr **CDN**](https://www.jsdelivr.com/package/npm/translate):
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/translate@1/translate.min.js"></script>
 ```
 
-After including translate the usage is similar for both Node.js and the browser. Now you have to set which engine you want to use (default is 'google'), and the key for it if needed:
+Now you have to set which engine you want to use (default is 'google'), and the key for it if needed:
 
 ```js
 translate.engine = "yandex"; // Or "yandex", "libre", "deepl"
@@ -42,9 +30,6 @@ translate.key = process.env.YANDEX_KEY;
 Then you can finally use it. Putting it all together:
 
 ```js
-// Omit this line if loading form a CDN
-import translate from "translate";
-
 translate.engine = "deepl";// Or "google", "yandex", "libre"
 translate.key = process.env.DEEPL_KEY;
 
@@ -146,20 +131,12 @@ $("#translate").submit(async e => {
   const spanish = await translate(text, { to: "es" });
   alert(spanish);
 });
-
-// Node.js; serverjs.io example for demonstration purposes
-const route = async ctx => {
-  const spanish = await translate(ctx.body, { to: "es" });
-  return send(spanish);
-};
 ```
 
 ## Authors and thanks
 
-Current package and development: [Francisco Presencia](https://francisco.io/)
+Current package and development: [Mvuselelo N Ndhlovu](https://github.com/mntando)
+
+Repository forked from: [Francisco Presencia](https://francisco.io/)
 
 Original package and idea: Andrew Lunny (alunny), Marak Squires, Google
-
-Testing in Internet Explorer supported by BrowserStack:
-
-[![BrowserStack logo](https://i.imgur.com/CuCuOkL.png)](https://browserstack.com/)
