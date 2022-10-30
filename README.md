@@ -3,13 +3,11 @@
 Convert text to different languages on the browser. Flexible package and powerful back-end using Google (default), [Yandex](https://translate.yandex.com/), [Libre](https://libretranslate.com/) or [DeepL](https://www.deepl.com/en/translator):
 
 ```js
-import translate from "translate";
+const text = await translate("Hello, World", "it"); 
+```
 
-translate.engine = "deepl";
-translate.key = process.env.DEEPL_KEY;
-
-const text = await translate("Hello world", "es");
-console.log("Hola mundo");
+```
+"Ciao mondo" 
 ```
 
 ## Getting started
