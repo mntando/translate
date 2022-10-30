@@ -26,7 +26,7 @@ All your text to be translated should be under a class called "translate":
 <\p>
 ```
 
-For the button to change language: [Button]()
+For the button to change language: [button]()
 
 In your javascript file: [javascript]()
 
